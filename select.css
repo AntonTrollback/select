@@ -50,6 +50,12 @@
   -moz-appearance: window;
 }
 
+.Select select:disabled {
+  color: var(--Select-color);
+  opacity: var(--Select-disabled-opacity);
+  cursor: default;
+}
+
 /**
  * Remove excess padding and border in Firefox 4+
  */
