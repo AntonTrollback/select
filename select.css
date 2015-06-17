@@ -1,9 +1,9 @@
-/** @define Select; use strict */
+/** @define Select; */
 
 :root {
-  --Select-border-color: currentcolor;
-  --Select-border-width: 1px;
+  --Select-border: 1px solid;
   --Select-color: #000;
+  --Select-color-focus: var(--Select-color);
   --Select-disabled-opacity: 0.6;
   --Select-font: inherit;
   --Select-padding: 0.4em 0.75em;
@@ -16,10 +16,9 @@
 .Select {
   position: relative;
   width: 100%;
+  box-sizing: border-box;
+  border: var(--Select-border);
   user-select: none;
-  border-color: var(--Select-border-color);
-  border-style: solid;
-  border-width: var(--Select-border-width);
 }
 
 .Select::after {
@@ -29,7 +28,6 @@
   top: 0;
   padding: var(--Select-padding);
   pointer-events: none;
-  text-align: right;
 }
 
 .Select select {
@@ -46,7 +44,7 @@
   line-height: normal;
   /* Correct inability to style `select` in iOS */
   -webkit-appearance: none;
-  /* Remove native arrow in Firefox */
+  /* Remove native arrow in Firefox OSX */
   -moz-appearance: window;
 }
 
@@ -57,7 +55,7 @@
 }
 
 /**
- * Remove excess padding and border in Firefox 4+
+ * Remove excess padding and border in Firefox
  */
 
 .Select select::-moz-focus-inner {
@@ -71,7 +69,7 @@
  */
 
 .Select select:focus {
-  outline: 1px dotted black;
+  outline: 1px dotted #212121;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
@@ -81,7 +79,7 @@
 
 .Select select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 black;
+  text-shadow: 0 0 0 var(--Select-color-focus);
 }
 
 /**
@@ -108,7 +106,5 @@
 }
 
 x:-o-prefocus, .Select::after {
-  /* Todo: should target up to Opera 14 (pre Blink) */
   display: none;
 }
-
