@@ -23,7 +23,7 @@
   /* Correct inability to style `select` in iOS */
   -webkit-appearance: none;
 
-  /* Hide native arrow in Firefox OSX */
+  /* Hide native arrow in Firefox 35+ */
   -moz-appearance: none;
 
   /* Truncate text */
