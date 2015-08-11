@@ -51,4 +51,4 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
 - Dotted inner focus outline in Firefox
 - Falling back to the native arrow (hiding the custom one) in IE<10 & Firefox<35
 - Blue focus state in IE<10
-- The custom arrow is unclickable in IE10 unless it's a svg element
+- The custom arrow is unclickable in IE10 unless it's an svg element
