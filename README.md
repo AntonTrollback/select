@@ -1,17 +1,17 @@
-## SUIT CSS component: select
-> A component providing a solid base for redesigning the native select element
+## .Select component
+> A SUIT CSS component providing a solid base for redesigning the native select element
 
 Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-npm install suitcss-select
+`npm install suitcss-select`
 
 ## Available selectors
-- `.Select` – [core] The core button component, used as a wrapper
-- `.is-disabled` – [state] For disabled-state styles (also include the `disabled` attribute on the `select` element)
-- `.Select-control[:hover|:focus|:active]` – [descendant] The `select` element
-- `.Select-figure` – [descendant] The custom "arrow"
+- `.Select` – The core button component, used as a wrapper
+- `.Select.is-disabled` – For disabled-state styles (must also include the `disabled` attribute)
+- `.Select-control[:hover|:focus|:active]` – The `select` element used for most of the styling
+- `.Select-figure` – The custom drop-down arrow
 - `.Select-control[:hover|:focus|:active] + .Select-figure` – Be creative
 
 ## Example
@@ -51,4 +51,4 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
 - Dotted inner focus outline in Firefox
 - Falling back to the native arrow (hiding the custom one) in IE<10 & Firefox<35
 - Blue focus state in IE<10
-- Custom arrow is unclickable in IE10 unless the figure is a svg element
+- The custom arrow is unclickable in IE10 unless it's a svg element
