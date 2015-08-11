@@ -1,10 +1,5 @@
 /** @define Select; use strict */
 
-:root {
-  --Select-color: black;
-  --Select-focus-color: var(--Select-color);
-}
-
 .Select {
   position: relative;
 }
@@ -13,11 +8,11 @@
   box-sizing: border-box;
   width: 100%;
   padding: 1em 2em 1em 1em;
-  border: 1px solid var(--Select-color);
+  border: 1px solid black;
   background: transparent;
   cursor: pointer;
   font: inherit;
-  color: var(--Select-color);
+  color: black;
 
   /* Reset iOS user-agent */
   border-radius: 0;
@@ -43,7 +38,9 @@
   position: absolute;
   right: 1em;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 1em;
   height: 1em;
 }
@@ -54,7 +51,7 @@
 
 .Select.is-disabled .Select-control {
   opacity: 1;
-  color: var(--Select-color);
+  color: black;
   cursor: default;
 }
 
@@ -80,7 +77,7 @@
 .Select-control:focus {
   outline: 1px dotted #212121;
   outline: 5px auto -webkit-focus-ring-color;
-  color: var(--Select-focus-color);
+  color: black;
 }
 
 /**
@@ -89,7 +86,7 @@
 
 .Select-control:-moz-focusring {
   color: transparent !important;
-  text-shadow: 0 0 0 var(--Select-focus-color) !important;
+  text-shadow: 0 0 0 black !important;
 }
 
 /**
@@ -101,7 +98,7 @@ _:-moz-tree-row(hover),
   display: none;
 }
 
-@supports (filter: blur(0)) {
+@supports ((-webkit-filter: blur(0)) or (filter: blur(0))) {
   _:-moz-tree-row(hover),
   .Select.Select .Select-figure {
     display: block;
@@ -131,6 +128,6 @@ x:-o-prefocus, .Select.Select .Select-figure {
   }
   .Select-control:focus::-ms-value {
     background: transparent;
-    color: var(--Select-focus-color);
+    color: black;
   }
 }
