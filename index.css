@@ -1,0 +1,130 @@
+/** @define Select; use strict */
+
+.Select {
+  position: relative;
+}
+
+.Select-control {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em 2em 1em 1em;
+  border: 1px solid;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+
+  /* Reset iOS user-agent */
+  border-radius: 0;
+
+  /* Normalize, can't be changed from `normal` in Firefox 4 */
+  line-height: normal;
+
+  /* Correct inability to style `select` in iOS */
+  -webkit-appearance: none;
+
+  /* Hide native arrow in Firefox OSX */
+  -moz-appearance: none;
+
+  /* Truncate text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Select-figure {
+  pointer-events: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+}
+
+/**
+ * Disabled state
+ */
+
+.Select.is-disabled,
+.Select:not(.is-disabled) .Select-control:disabled {
+  color: currentColor;
+  cursor: default;
+  opacity: 0.5;
+}
+
+.Select.is-disabled .Select-control {
+  opacity: 1;
+  color: currentColor;
+}
+
+/**
+ * Remove excess padding and border in Firefox
+ */
+
+.Select-control::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Work around for a Firefox/IE bug where changing `select`
+ * background color results in a loss of the default focus styles
+ */
+
+.Select-control:focus {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+/**
+ * Hide redundant text outline in Firefox
+ */
+
+.Select-control:-moz-focusring {
+  color: transparent;
+}
+
+/**
+ *  Fallback to native arrow in Firefox < 35
+ */
+
+_:-moz-tree-row(hover),
+.Select.Select .Select-figure {
+  display: none;
+}
+
+@supports (filter: blur(0)) {
+  _:-moz-tree-row(hover),
+  .Select.Select .Select-figure {
+    display: block;
+  }
+}
+
+/**
+ * Fallback to native arrow in IE<10 and Opera < 9.6
+ */
+
+.Select.Select .Select-figure {
+  display: none\9;
+}
+
+x:-o-prefocus, .Select.Select .Select-figure {
+  display: none;
+}
+
+/**
+ * Remove the native arrow and the blue background color in IE 10/11+
+ */
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  .Select-control::-ms-expand {
+    display: none;
+  }
+  .Select-control:focus::-ms-value {
+    background: transparent;
+    color: black;
+  }
+}
