@@ -38,6 +38,9 @@
   position: absolute;
   right: 1em;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 1em;
   height: 1em;
