@@ -35,7 +35,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 The custom arrow (`.Select-figure`) is optional and can be any element of choice.
 
-```
+```css
 @import "suitcss-select";
 
 :root {
