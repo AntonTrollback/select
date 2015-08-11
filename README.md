@@ -14,6 +14,11 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 - `.Select-figure` – The custom drop-down arrow
 - `.Select-control[:hover|:focus|:active] + .Select-figure` – Be creative
 
+## Configurable variables
+
+- `--Select-color`
+- `--Select-focus-color`
+
 ## Example
 
 ```html
@@ -33,13 +38,17 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
 ```
 @import "suitcss-select";
 
+:root {
+  --Select-color: #555;
+  --Select-focus-color: #222;
+}
+
 .Select--myModifier {
   margin: 2em 0;
 }
 
 .Select--myModifier .Select-control {
   background: #ccc;
-  color: #333;
   border: 0;
 }
 
@@ -48,7 +57,6 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
 ```
 
 ## Known issues
-- Dotted inner focus outline in Firefox
 - Falling back to the native arrow (hiding the custom one) in IE<10 & Firefox<35
 - Blue focus state in IE<10
 - The custom arrow is unclickable in IE10 unless it's an svg element

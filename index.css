@@ -1,5 +1,10 @@
 /** @define Select; use strict */
 
+:root {
+  --Select-color: black;
+  --Select-focus-color: var(--Select-color);
+}
+
 .Select {
   position: relative;
 }
@@ -8,11 +13,11 @@
   box-sizing: border-box;
   width: 100%;
   padding: 1em 2em 1em 1em;
-  border: 1px solid;
+  border: 1px solid var(--Select-color);
   background: transparent;
   cursor: pointer;
   font: inherit;
-  color: inherit;
+  color: var(--Select-color);
 
   /* Reset iOS user-agent */
   border-radius: 0;
@@ -38,9 +43,6 @@
   position: absolute;
   right: 1em;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 1em;
   height: 1em;
@@ -50,16 +52,15 @@
  * Disabled state
  */
 
-.Select.is-disabled,
-.Select:not(.is-disabled) .Select-control:disabled {
-  color: currentColor;
-  cursor: default;
-  opacity: 0.5;
-}
-
 .Select.is-disabled .Select-control {
   opacity: 1;
-  color: currentColor;
+  color: var(--Select-color);
+  cursor: default;
+}
+
+.Select.is-disabled,
+.Select:not(.is-disabled) .Select-control:disabled {
+  opacity: 0.5;
 }
 
 /**
@@ -79,6 +80,7 @@
 .Select-control:focus {
   outline: 1px dotted #212121;
   outline: 5px auto -webkit-focus-ring-color;
+  color: var(--Select-focus-color);
 }
 
 /**
@@ -86,7 +88,8 @@
  */
 
 .Select-control:-moz-focusring {
-  color: transparent;
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--Select-focus-color) !important;
 }
 
 /**
@@ -128,6 +131,6 @@ x:-o-prefocus, .Select.Select .Select-figure {
   }
   .Select-control:focus::-ms-value {
     background: transparent;
-    color: black;
+    color: var(--Select-focus-color);
   }
 }
