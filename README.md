@@ -1,20 +1,23 @@
 ## .Select component
-> A SUIT CSS component providing a solid base for redesigning the native select element
 
-Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
+A [SUIT CSS](https://github.com/suitcss/suit/) component providing a solid base for redesigning the native select element
 
 ## Installation
 
-`npm install suitcss-select`
+```
+$ npm install suitcss-select
+```
 
 ## Available selectors
+
 - `.Select` – The core button component, used as a wrapper
 - `.Select.is-disabled` – For disabled-state styles (must also include the `disabled` attribute)
-- `.Select-control[:hover|:focus|:active]` – The `select` element used for most of the styling
+- `.Select-control[:hover|:focus|:active]` – The `<select>` element used for most of the styling
 - `.Select-figure` – The custom drop-down arrow
-- `.Select-control[:hover|:focus|:active] + .Select-figure` – Be creative
 
 ## Configurable variables
+
+Use these for the widest browser support, instead of just overriding.
 
 - `--Select-color`
 - `--Select-focus-color`
@@ -22,7 +25,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Example
 
 ```html
-<div class="Select Select--myModifier">
+<div class="Select">
   <select class="Select-control">
     <option>Option 1</option>
     <option>Option 2</option>
@@ -39,21 +42,19 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
 @import "suitcss-select";
 
 :root {
-  --Select-color: #555;
-  --Select-focus-color: #222;
+  --Select-color: gray;
+  --Select-focus-color: darkgray;
 }
 
-.Select--myModifier {
+.Select {
   margin: 2em 0;
 }
 
-.Select--myModifier .Select-control {
-  background: #ccc;
+.Select-control {
+  background: lightgray;
   border: 0;
+  border-radius: 0.2em;
 }
-
-...
-
 ```
 
 ## Known issues
