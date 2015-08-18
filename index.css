@@ -9,7 +9,16 @@
   position: relative;
 }
 
+/**
+ * The <select> element
+ *
+ * 1. Let it override iOS user-agent and hide native arrow in Firefox 35+
+ * 2. Can't be changed from `normal` in Firefox
+ * 3. Truncate text
+ */
+
 .Select-control {
+  appearance: none; /* 1 */
   background: transparent;
   border: 1px solid var(--Select-color);
   border-radius: 0;
@@ -17,23 +26,17 @@
   color: var(--Select-color);
   cursor: pointer;
   font: inherit;
+  line-height: normal !important; /* 2 */
+  overflow: hidden; /* 3 */
   padding: 1em 2em 1em 1em;
+  text-overflow: ellipsis; /* 3 */
+  white-space: nowrap; /* 3 */
   width: 100%;
-
-  /* Hide native arrow in Firefox 35+ */
-  -moz-appearance: none;
-
-  /* Correct inability to override iOS user-agent */
-  -webkit-appearance: none;
-
-  /* Can't be changed from `normal` in Firefox */
-  line-height: normal !important;
-
-  /* Truncate text */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
+
+/**
+ * The arrow icon. It's optional and can be any element of choice.
+ */
 
 .Select-figure {
   cursor: pointer;
@@ -47,27 +50,27 @@
 }
 
 /**
- * Disabled state
- */
-
-.Select.is-disabled .Select-control {
-  color: var(--Select-color);
-  cursor: default;
-  opacity: 1;
-}
-
-.Select.is-disabled,
-.Select:not(.is-disabled) .Select-control:disabled {
-  opacity: 0.5;
-}
-
-/**
  * Remove excess padding and border in Firefox
  */
 
 .Select-control::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+/**
+ * Normalize disable state cross-browsers
+ */
+
+.Select.is-disabled .Select-control {
+  color: var(--Select-color);
+  cursor: default;
+  opacity: 1; /* 1 */
+}
+
+.Select.is-disabled,
+.Select:not(.is-disabled) .Select-control:disabled {
+  opacity: 0.5;
 }
 
 /**
@@ -99,7 +102,8 @@
   display: none\9;
 }
 
-x:-o-prefocus, .Select.Select .Select-figure {
+x:-o-prefocus,
+.Select.Select .Select-figure {
   display: none;
 }
 
