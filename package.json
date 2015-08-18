@@ -1,6 +1,6 @@
 {
   "name": "suitcss-select",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Providing a solid base for redesigning the native select element.",
   "keywords": [
     "css",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/antontrollback/suitcss-select.git"
+    "url": "https://github.com/antontrollback/select.git"
   },
   "author": "Anton Trollbäck",
   "license": "MIT",
