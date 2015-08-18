@@ -7,9 +7,9 @@
 
 <div class="Select">
   <select class="Select-control">
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3 with longer text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</option>
+    <option>First option</option>
+    <option>Second option</option>
+    <option>Third option with longer text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</option>
   </select>
   <svg class="Select-figure" viewBox="0 0 2 1.5">
     <polygon points="0,0 2,0 1,1.5" fill="currentColor">
@@ -20,7 +20,7 @@
 
 <div class="Select is-disabled">
   <select class="Select-control" disabled>
-    <option>Disabled option 1</option>
+    <option>Disabled</option>
   </select>
   <svg class="Select-figure" viewBox="0 0 2 1.5">
     <polygon points="0,0 2,0 1,1.5" fill="currentColor">
@@ -43,41 +43,42 @@
 
 <style>
   body {
-    margin: 3em auto;
+    margin: 4em auto;
+    max-width: 480px;
     width: 90%;
   }
 
   hr {
-    border: 0;
-    height: 2.5em;
     background: transparent;
+    border: 0;
+    height: 2.8em;
   }
 
   .Select--styled .Select-control {
-    font-size: 22px;
-    padding: 0.5em 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #666;
     background: transparent;
     border: 0;
     border-bottom: 2px solid #bbb;
+    color: #666;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    padding: 0.5em 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
   }
 
   .Select--styled .Select-figure {
-    width: 1em;
-    height: auto;
-    right: 0;
-    margin: 2px 1px 0 0;
     color: #999;
+    height: auto;
+    margin: 2px 1px 0 0;
+    right: 0;
+    width: 1em;
   }
 
   .Select--styled .Select-control:hover,
   .Select--styled .Select-control:focus {
-    outline: 0;
     border-color: #60A0F5;
     color: #333;
+    outline: 0;
   }
 
   .Select--styled .Select-control:hover + .Select-figure,
