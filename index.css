@@ -65,7 +65,7 @@
 .Select.is-disabled .Select-control {
   color: var(--Select-color);
   cursor: default;
-  opacity: 1; /* 1 */
+  opacity: 1;
 }
 
 .Select.is-disabled,
