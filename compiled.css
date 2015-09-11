@@ -7,7 +7,7 @@
 /**
  * The <select> element
  *
- * 1. Let it override iOS user-agent and hide native arrow in Firefox 35+
+ * 1. Allow overriding the iOS user-agent and hide native arrow in Firefox 35+
  * 2. Can't be changed from `normal` in Firefox
  * 3. Truncate text
  */
@@ -32,7 +32,7 @@
 }
 
 /**
- * The arrow icon. It's optional and can be any element of choice.
+ * The arrow figure. It's optional and can be any element of choice.
  */
 
 .Select-figure {
@@ -43,8 +43,8 @@
   right: 1em;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 1em;
 }
 
@@ -64,7 +64,7 @@
 .Select.is-disabled .Select-control {
   color: black;
   cursor: default;
-  opacity: 1; /* 1 */
+  opacity: 1;
 }
 
 .Select.is-disabled,
