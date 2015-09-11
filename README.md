@@ -1,17 +1,17 @@
-## .Select component
+## SUIT CSS components-select
 
-A [SUIT CSS](https://github.com/suitcss/suit/) component providing a solid base for redesigning the native select element
+A [SUIT CSS](https://github.com/suitcss/suit/) component providing a solid base for redesigning the native select element.
 
 ## Installation
 
 ```
-$ npm install suitcss-select
+$ npm install suitcss-components-select
 ```
 
 ## Available selectors
 
 - `.Select` – The core wrapper element
-- `.Select.is-disabled` – For disabled-state styles (must also include the `disabled` attribute)
+- `.is-disabled` – For disabled-state styles (must also include the `disabled` attribute)
 - `.Select-control[:hover|:focus|:active]` – The `<select>` element used for most of the styling
 - `.Select-figure` – The custom drop-down arrow
 
@@ -39,7 +39,7 @@ Use these for the widest browser support, instead of overriding.
 The custom arrow (`.Select-figure`) is optional and can be any element of choice.
 
 ```css
-@import "suitcss-select";
+@import "suitcss-components-select";
 
 :root {
   --Select-color: gray;
