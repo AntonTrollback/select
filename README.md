@@ -10,14 +10,14 @@ $ npm install suitcss-select
 
 ## Available selectors
 
-- `.Select` – The core button component, used as a wrapper
+- `.Select` – The core wrapper element
 - `.Select.is-disabled` – For disabled-state styles (must also include the `disabled` attribute)
 - `.Select-control[:hover|:focus|:active]` – The `<select>` element used for most of the styling
 - `.Select-figure` – The custom drop-down arrow
 
 ## Configurable variables
 
-Use these for the widest browser support, instead of just overriding.
+Use these for the widest browser support, instead of overriding.
 
 - `--Select-color`
 - `--Select-focus-color`
