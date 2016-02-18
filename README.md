@@ -11,9 +11,9 @@ $ npm install suitcss-components-select
 ## Available selectors
 
 - `.Select` – The core wrapper element
-- `.is-disabled` – For disabled-state styles (must also include the `disabled` attribute)
 - `.Select-control[:hover|:focus|:active]` – The `<select>` element used for most of the styling
 - `.Select-figure` – The custom drop-down arrow
+- `.Select.is-disabled .Select-control` – The `disabled` attribute should also be set to `.Select-control`
 
 ## Configurable variables
 
@@ -21,12 +21,13 @@ Use these for the widest browser support, instead of overriding.
 
 - `--Select-color`
 - `--Select-focus-color`
+- `--Select-disabled-opacity`
 
 ## Example
 
 ```html
-<div class="Select">
-  <select class="Select-control">
+<div class="Select is-disabled">
+  <select class="Select-control" disabled>
     <option>Option 1</option>
     <option>Option 2</option>
   </select>
@@ -43,7 +44,7 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
 
 :root {
   --Select-color: gray;
-  --Select-focus-color: darkgray;
+  --Select-focus-color: blue;
 }
 
 .Select {
@@ -54,6 +55,10 @@ The custom arrow (`.Select-figure`) is optional and can be any element of choice
   background: lightgray;
   border: 0;
   border-radius: 0.2em;
+}
+
+.Select-figure {
+  color: blue;
 }
 ```
 

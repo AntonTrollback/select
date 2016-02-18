@@ -3,6 +3,7 @@
 :root {
   --Select-color: black;
   --Select-focus-color: var(--Select-color);
+  --Select-disabled-opacity: 0.5;
 }
 
 .Select {
@@ -35,7 +36,7 @@
 }
 
 /**
- * The arrow figure. It's optional and can be any element of choice.
+ * The arrow figure. It's optional and can be any element of choice
  */
 
 .Select-figure {
@@ -70,7 +71,7 @@
 
 .Select.is-disabled,
 .Select:not(.is-disabled) .Select-control:disabled {
-  opacity: 0.5;
+  opacity: var(--Select-disabled-opacity);
 }
 
 /**
