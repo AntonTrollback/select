@@ -2,6 +2,8 @@
 
 A [SUIT CSS](https://github.com/suitcss/suit/) component providing a solid base for redesigning the native select element.
 
+Note: not tested with the `multiple` attribute.
+
 ## Installation
 
 ```
